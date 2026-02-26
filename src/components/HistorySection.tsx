@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight, Landmark, Target, TrendingUp } from "lucide-react";
 
 const roadmap = [
@@ -27,18 +28,14 @@ export default function HistorySection() {
     <section className="py-20 bg-cream">
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-          <div className="relative rounded-sm overflow-hidden bg-gradient-to-br from-charcoal to-navy min-h-[400px] flex items-end">
-            <div className="absolute inset-0 opacity-10">
-              <div
-                className="h-full w-full"
-                style={{
-                  backgroundImage: `
-                    repeating-linear-gradient(0deg, transparent, transparent 30px, rgba(196,151,90,0.4) 30px, rgba(196,151,90,0.4) 31px),
-                    repeating-linear-gradient(90deg, transparent, transparent 30px, rgba(139,26,26,0.3) 30px, rgba(139,26,26,0.3) 31px)
-                  `,
-                }}
-              />
-            </div>
+          <div className="relative rounded-sm overflow-hidden min-h-[400px] flex items-end">
+            <Image
+              src="/Images/Heritage.png"
+              alt="Traditional gathering at the Okuapemhene's court"
+              fill
+              className="object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-navy via-navy/60 to-navy/20" />
             <div className="relative z-10 p-8">
               <span className="inline-block px-3 py-1 bg-gold/20 text-gold text-xs uppercase tracking-wider rounded-sm mb-4">
                 Policy Forecast

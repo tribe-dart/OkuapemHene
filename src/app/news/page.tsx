@@ -1,14 +1,16 @@
+import Image from "next/image";
 import { Calendar } from "lucide-react";
 
 const allNews = [
   {
     date: "February 2026",
     category: "Policy",
-    title: "Office of the Okuapehene Launches 2025–2030 Operational Policy",
+    title: "Office of the Okuapemhene Launches 2025–2030 Operational Policy",
     excerpt:
       "His Royal Majesty Oseadeeyo Kwasi Akuffo III unveils a comprehensive Operational Policy and Work Programme to transform the Office into a world-class institution. The framework outlines strategies for institutional strengthening, socio-economic development, cultural preservation, and innovation.",
     color: "bg-kente-red",
     featured: true,
+    image: "/Images/hene.png",
   },
   {
     date: "January 2026",
@@ -18,6 +20,7 @@ const allNews = [
       "The Office announces plans to establish an innovation hub to foster creativity, support digital literacy, and develop technology-driven solutions to local challenges. The hub will partner with research institutions and universities.",
     color: "bg-kente-green",
     featured: true,
+    image: "/Images/New Img.png",
   },
   {
     date: "January 2026",
@@ -42,7 +45,7 @@ const allNews = [
     category: "Development",
     title: "Strategic Partnerships Sought for Akuapem Development Projects",
     excerpt:
-      "The Office of the Okuapehene initiates conversations with government agencies, NGOs, and private sector organisations to establish Memoranda of Understanding for priority development projects.",
+      "The Office of the Okuapemhene initiates conversations with government agencies, NGOs, and private sector organisations to establish Memoranda of Understanding for priority development projects.",
     color: "bg-kente-green",
     featured: false,
   },
@@ -81,15 +84,14 @@ export default function NewsPage() {
 
   return (
     <>
-      <section className="relative pt-32 pb-20 bg-navy">
-        <div className="absolute inset-0 opacity-[0.03]">
-          <div
-            className="h-full w-full"
-            style={{
-              backgroundImage: `repeating-linear-gradient(45deg, transparent, transparent 40px, rgba(196,151,90,0.5) 40px, rgba(196,151,90,0.5) 41px)`,
-            }}
-          />
-        </div>
+      <section className="relative pt-32 pb-20 bg-navy overflow-hidden">
+        <Image
+          src="/Images/News.png"
+          alt="Akuapem Odwira Festival"
+          fill
+          className="object-cover opacity-15"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-navy/50 via-navy/70 to-navy" />
         <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 text-center">
           <span className="text-gold text-sm tracking-[0.2em] uppercase font-medium">
             Stay Updated
@@ -98,8 +100,8 @@ export default function NewsPage() {
             News &amp; <span className="text-gold">Announcements</span>
           </h1>
           <p className="text-white/60 text-base max-w-2xl mx-auto">
-            The latest news, policy updates, and announcements from the Office of
-            the Okuapehene and the Akuapem Traditional Area.
+            The latest news, policy updates, and announcements from the Office
+            of the Okuapemhene and the Akuapem Traditional Area.
           </p>
         </div>
       </section>
@@ -118,7 +120,15 @@ export default function NewsPage() {
                 key={item.title}
                 className="group bg-cream rounded-sm overflow-hidden card-hover"
               >
-                <div className="h-48 bg-gradient-to-br from-navy to-charcoal relative flex items-end p-7">
+                <div className="h-48 relative flex items-end p-7">
+                  {item.image && (
+                    <Image
+                      src={item.image}
+                      alt={item.title}
+                      fill
+                      className="object-cover"
+                    />
+                  )}
                   <div className="news-overlay absolute inset-0" />
                   <div className="relative z-10">
                     <span

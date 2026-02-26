@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Crown, Users, BookOpen, Lightbulb } from "lucide-react";
 
 const focusAreas = [
@@ -42,13 +43,14 @@ export default function MissionSection() {
             </h2>
             <p className="text-charcoal-light/80 leading-relaxed text-base mb-4">
               Under the dynamic leadership of His Royal Majesty Oseadeeyo Kwasi
-              Akuffo III, the Office of the Okuapehene is being transformed from a
-              largely ceremonial entity into a modern, globally recognized
-              institution driving significant socio-economic progress.
+              Akuffo III, the Office of the Okuapemhene is being transformed
+              from a largely ceremonial entity into a modern, globally
+              recognized institution driving significant socio-economic
+              progress.
             </p>
             <p className="text-charcoal-light/80 leading-relaxed text-sm mb-4">
               <strong className="text-navy">Vision:</strong> To transform the
-              Office of the Okuapehene into a world-class, globally recognized
+              Office of the Okuapemhene into a world-class, globally recognized
               institution, driving socio-economic development, cultural
               preservation, and innovation.
             </p>
@@ -67,19 +69,20 @@ export default function MissionSection() {
           </div>
 
           <div className="relative">
-            <div className="aspect-[4/5] rounded-sm overflow-hidden bg-gradient-to-br from-navy to-navy-light flex items-center justify-center">
-              <div className="text-center p-8">
-                <div className="w-28 h-28 mx-auto mb-5 rounded-full border-4 border-gold/30 flex items-center justify-center">
-                  <Crown className="h-14 w-14 text-gold/60" />
-                </div>
-                <p className="font-serif text-lg text-white/80 mb-1">
+            <div className="aspect-[4/5] rounded-sm overflow-hidden relative">
+              <Image
+                src="/Images/king.png"
+                alt="His Royal Majesty Oseadeeyo Kwasi Akuffo III on the royal throne"
+                fill
+                className="object-cover object-top"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-navy/80 via-transparent to-transparent" />
+              <div className="absolute bottom-0 left-0 right-0 p-6 text-center">
+                <p className="font-serif text-lg text-white font-semibold mb-1">
                   Oseadeeyo Kwasi Akuffo III
                 </p>
-                <p className="text-gold-light/80 text-sm mb-1">
-                  King of the Akuapem State
-                </p>
-                <p className="text-gold-light/50 text-xs uppercase tracking-widest">
-                  26th Occupant of the Ofori Kuma Stool
+                <p className="text-gold-light text-xs uppercase tracking-widest">
+                  26th Occupant &middot; Ofori Kuma Stool
                 </p>
               </div>
             </div>

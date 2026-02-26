@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState, useRef } from "react";
+import Image from "next/image";
 
 const stats = [
   { value: 26, suffix: "th", label: "Ofori Kuma Stool", description: "Occupant of the sacred stool" },
@@ -78,14 +79,12 @@ export default function StatsSection() {
 
   return (
     <section ref={ref} className="py-20 bg-navy relative overflow-hidden">
-      <div className="absolute inset-0 opacity-[0.03]">
-        <div
-          className="h-full w-full"
-          style={{
-            backgroundImage: `repeating-linear-gradient(45deg, transparent, transparent 40px, rgba(196,151,90,0.5) 40px, rgba(196,151,90,0.5) 41px)`,
-          }}
-        />
-      </div>
+      <Image
+        src="/Images/People.png"
+        alt="Akuapem chiefs in kente"
+        fill
+        className="object-cover opacity-10"
+      />
 
       <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6">
         <div className="text-center mb-12">

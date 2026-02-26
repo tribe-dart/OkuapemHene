@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Menu, X, ChevronDown, Search } from "lucide-react";
 
 const navItems = [
@@ -17,7 +18,6 @@ const navItems = [
       { label: "The Akuapem State", href: "/about#kingdom" },
     ],
   },
-  { label: "Chieftaincy", href: "/chieftaincy" },
   { label: "Development", href: "/development" },
   { label: "News", href: "/news" },
   { label: "Gallery", href: "/gallery" },
@@ -37,9 +37,7 @@ export default function Header() {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled
-          ? "bg-navy/95 backdrop-blur-md shadow-lg"
-          : "bg-transparent"
+        scrolled ? "bg-navy/95 backdrop-blur-md shadow-lg" : "bg-transparent"
       }`}
     >
       <div className="kente-border" />
@@ -47,12 +45,16 @@ export default function Header() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
         <div className="flex h-20 items-center justify-between">
           <Link href="/" className="flex items-center gap-3 group shrink-0">
-            <div className="flex h-11 w-11 items-center justify-center rounded-full border-2 border-gold bg-gold/10 text-gold font-serif text-lg font-bold transition-colors group-hover:bg-gold group-hover:text-white">
-              O
-            </div>
+            <Image
+              src="/Images/Logo.png"
+              alt="Akuapem Traditional Area Crest"
+              width={44}
+              height={44}
+              className="rounded-full"
+            />
             <div className="hidden sm:block">
               <p className="font-serif text-base font-bold text-white leading-tight">
-                Okuapehene
+                Okuapemhene
               </p>
               <p className="text-[10px] text-gold-light tracking-widest uppercase">
                 Office of the King
@@ -103,7 +105,11 @@ export default function Header() {
               className="md:hidden h-10 w-10 flex items-center justify-center rounded-full text-white hover:bg-white/10 transition-colors"
               aria-label="Toggle menu"
             >
-              {mobileOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+              {mobileOpen ? (
+                <X className="h-6 w-6" />
+              ) : (
+                <Menu className="h-6 w-6" />
+              )}
             </button>
           </div>
         </div>

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { GraduationCap, Heart, Building2, Lightbulb, Wifi, Landmark, Target, TrendingUp, CheckCircle } from "lucide-react";
 import Link from "next/link";
 
@@ -91,18 +92,62 @@ const outcomes = [
   { term: "Long-Term", items: ["Sustainable development and prosperity", "Global recognition as a leading institution", "Lasting legacy of progress for Akuapem"] },
 ];
 
+const systems = [
+  {
+    category: "Systems",
+    items: [
+      "Administrative systems for financial management and record keeping",
+      "Decision-making protocols ensuring inclusivity and consultation",
+      "Monitoring and evaluation for progress tracking and accountability",
+    ],
+  },
+  {
+    category: "Structures",
+    items: [
+      "Well-defined organizational structure with clear reporting lines",
+      "Advisory councils composed of experts and community representatives",
+      "Platforms for regular community dialogue and engagement",
+    ],
+  },
+  {
+    category: "Strategies",
+    items: [
+      "Comprehensive resource mobilisation from diverse sources",
+      "Communication strategy for stakeholder engagement and transparency",
+      "Capacity building programmes for staff development",
+    ],
+  },
+  {
+    category: "Services",
+    items: [
+      "Advocacy and representation at local, regional, and national levels",
+      "Conflict resolution and promotion of social cohesion",
+      "Facilitation and coordination of development projects",
+    ],
+  },
+];
+
+const majorIssues = [
+  "Governance and Leadership",
+  "Finance and Administration",
+  "Operations and Coordination",
+  "Communications, Media and Public Relations",
+  "ICT and Technology Deployment",
+  "Human Resource, Human Capital and Capacity Building",
+  "Website, Social Media and Strong Digital Presence",
+];
+
 export default function DevelopmentPage() {
   return (
     <>
-      <section className="relative pt-32 pb-20 bg-navy">
-        <div className="absolute inset-0 opacity-[0.03]">
-          <div
-            className="h-full w-full"
-            style={{
-              backgroundImage: `repeating-linear-gradient(45deg, transparent, transparent 40px, rgba(196,151,90,0.5) 40px, rgba(196,151,90,0.5) 41px)`,
-            }}
-          />
-        </div>
+      <section className="relative pt-32 pb-20 bg-navy overflow-hidden">
+        <Image
+          src="/Images/Discussion.png"
+          alt="Youth of the Akuapem Traditional Area"
+          fill
+          className="object-cover opacity-15"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-navy/50 via-navy/70 to-navy" />
         <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 text-center">
           <span className="text-gold text-sm tracking-[0.2em] uppercase font-medium">
             Work Programme 2025–2030
@@ -164,8 +209,40 @@ export default function DevelopmentPage() {
         </div>
       </section>
 
-      {/* Implementation Phases */}
+      {/* Systems, Structures, Strategies & Services */}
       <section className="py-20 bg-cream">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6">
+          <div className="text-center mb-14">
+            <span className="text-gold text-sm tracking-[0.2em] uppercase font-medium">
+              Operational Framework
+            </span>
+            <h2 className="font-serif text-3xl sm:text-4xl font-bold text-navy mt-3 gold-underline-center">
+              Systems, Structures, Strategies &amp; Services
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+            {systems.map((s) => (
+              <div key={s.category} className="bg-white rounded-sm p-6">
+                <h3 className="font-serif text-lg font-bold text-navy mb-4 pb-3 border-b border-gold/20">
+                  {s.category}
+                </h3>
+                <ul className="space-y-2.5">
+                  {s.items.map((item) => (
+                    <li key={item} className="flex items-start gap-2">
+                      <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-gold shrink-0" />
+                      <span className="text-xs text-charcoal-light/70 leading-relaxed">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Implementation Phases */}
+      <section className="py-20 bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <div className="text-center mb-14">
             <span className="text-gold text-sm tracking-[0.2em] uppercase font-medium">
@@ -180,7 +257,7 @@ export default function DevelopmentPage() {
             {phases.map((p) => {
               const Icon = p.icon;
               return (
-                <div key={p.phase} className="bg-white rounded-sm p-7 card-hover">
+                <div key={p.phase} className="bg-cream rounded-sm p-7 card-hover">
                   <div className="flex items-center gap-3 mb-5">
                     <div className="flex h-10 w-10 items-center justify-center rounded-full bg-gold/10 text-gold">
                       <Icon className="h-5 w-5" />
@@ -209,6 +286,31 @@ export default function DevelopmentPage() {
               approach, data-driven decision making, adaptive management,
               transparency and accountability.
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Major Issues for Consideration */}
+      <section className="py-20 bg-cream">
+        <div className="mx-auto max-w-4xl px-4 sm:px-6">
+          <div className="text-center mb-10">
+            <span className="text-gold text-sm tracking-[0.2em] uppercase font-medium">
+              Annual Programmes
+            </span>
+            <h2 className="font-serif text-3xl font-bold text-navy mt-3 gold-underline-center">
+              Major Issues for Consideration
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            {majorIssues.map((issue, i) => (
+              <div key={issue} className="flex items-center gap-3 bg-white rounded-sm px-5 py-4">
+                <span className="flex h-8 w-8 items-center justify-center rounded-full bg-gold/10 text-gold text-sm font-bold shrink-0">
+                  {i + 1}
+                </span>
+                <p className="text-sm text-navy font-medium">{issue}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>

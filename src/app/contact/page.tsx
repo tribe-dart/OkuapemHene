@@ -1,10 +1,15 @@
+import Image from "next/image";
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
 
 const contactInfo = [
   {
     icon: MapPin,
     title: "Palace Location",
-    details: ["Office of the Okuapehene", "Akropong-Akuapem", "Eastern Region, Ghana"],
+    details: [
+      "Office of the Okuapemhene",
+      "Akropong-Akuapem",
+      "Eastern Region, Ghana",
+    ],
   },
   {
     icon: Phone,
@@ -14,27 +19,30 @@ const contactInfo = [
   {
     icon: Mail,
     title: "Email",
-    details: ["info@okuapehene.gov.gh", "office@okuapehene.gov.gh"],
+    details: ["info@Okuapemhene.gov.gh", "office@Okuapemhene.gov.gh"],
   },
   {
     icon: Clock,
     title: "Office Hours",
-    details: ["Monday – Friday: 8:00 AM – 4:00 PM", "Saturday: By Appointment", "Sunday: Closed"],
+    details: [
+      "Monday – Friday: 8:00 AM – 4:00 PM",
+      "Saturday: By Appointment",
+      "Sunday: Closed",
+    ],
   },
 ];
 
 export default function ContactPage() {
   return (
     <>
-      <section className="relative pt-32 pb-20 bg-navy">
-        <div className="absolute inset-0 opacity-[0.03]">
-          <div
-            className="h-full w-full"
-            style={{
-              backgroundImage: `repeating-linear-gradient(45deg, transparent, transparent 40px, rgba(196,151,90,0.5) 40px, rgba(196,151,90,0.5) 41px)`,
-            }}
-          />
-        </div>
+      <section className="relative pt-32 pb-20 bg-navy overflow-hidden">
+        <Image
+          src="/Images/Heritage.png"
+          alt="Akuapem community engagement"
+          fill
+          className="object-cover opacity-15"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-navy/50 via-navy/70 to-navy" />
         <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 text-center">
           <span className="text-gold text-sm tracking-[0.2em] uppercase font-medium">
             Reach Out
@@ -43,9 +51,9 @@ export default function ContactPage() {
             Contact <span className="text-gold">Us</span>
           </h1>
           <p className="text-white/60 text-base max-w-2xl mx-auto">
-            Get in touch with the Office of the Okuapehene. We welcome inquiries,
-            requests for audience, partnership opportunities, and expressions of
-            interest in the Work Programme.
+            Get in touch with the Office of the Okuapemhene. We welcome
+            inquiries, requests for audience, partnership opportunities, and
+            expressions of interest in the Work Programme.
           </p>
         </div>
       </section>
@@ -63,10 +71,10 @@ export default function ContactPage() {
                 Office Contact Information
               </h2>
               <p className="text-charcoal-light/80 leading-relaxed mb-8">
-                The Office of the Okuapehene welcomes respectful communication
+                The Office of the Okuapemhene welcomes respectful communication
                 from citizens, organisations, government agencies, NGOs, and
-                potential partners. For formal requests or audience with His Royal
-                Majesty, please write to us or visit during office hours.
+                potential partners. For formal requests or audience with His
+                Royal Majesty, please write to us or visit during office hours.
               </p>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
@@ -98,7 +106,10 @@ export default function ContactPage() {
               <form className="space-y-5">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                   <div>
-                    <label htmlFor="firstName" className="block text-sm font-medium text-navy mb-1.5">
+                    <label
+                      htmlFor="firstName"
+                      className="block text-sm font-medium text-navy mb-1.5"
+                    >
                       First Name
                     </label>
                     <input
@@ -109,7 +120,10 @@ export default function ContactPage() {
                     />
                   </div>
                   <div>
-                    <label htmlFor="lastName" className="block text-sm font-medium text-navy mb-1.5">
+                    <label
+                      htmlFor="lastName"
+                      className="block text-sm font-medium text-navy mb-1.5"
+                    >
                       Last Name
                     </label>
                     <input
@@ -122,7 +136,10 @@ export default function ContactPage() {
                 </div>
 
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-navy mb-1.5">
+                  <label
+                    htmlFor="email"
+                    className="block text-sm font-medium text-navy mb-1.5"
+                  >
                     Email Address
                   </label>
                   <input
@@ -134,7 +151,10 @@ export default function ContactPage() {
                 </div>
 
                 <div>
-                  <label htmlFor="subject" className="block text-sm font-medium text-navy mb-1.5">
+                  <label
+                    htmlFor="subject"
+                    className="block text-sm font-medium text-navy mb-1.5"
+                  >
                     Subject
                   </label>
                   <select
@@ -143,8 +163,12 @@ export default function ContactPage() {
                   >
                     <option value="">Select a subject</option>
                     <option value="audience">Request for Audience</option>
-                    <option value="partnership">Partnership / MOU Inquiry</option>
-                    <option value="development">Development Programme Support</option>
+                    <option value="partnership">
+                      Partnership / MOU Inquiry
+                    </option>
+                    <option value="development">
+                      Development Programme Support
+                    </option>
                     <option value="media">Media / Press Inquiry</option>
                     <option value="inquiry">General Inquiry</option>
                     <option value="other">Other</option>
@@ -152,7 +176,10 @@ export default function ContactPage() {
                 </div>
 
                 <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-navy mb-1.5">
+                  <label
+                    htmlFor="message"
+                    className="block text-sm font-medium text-navy mb-1.5"
+                  >
                     Message
                   </label>
                   <textarea

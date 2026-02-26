@@ -1,3 +1,4 @@
+import Image from "next/image";
 import {
   Crown,
   Landmark,
@@ -12,9 +13,9 @@ const galleries = [
     icon: Crown,
     title: "Royal Ceremonies",
     description:
-      "Enstoolment, durbars, and sacred ceremonies of the Okuapehene",
+      "Enstoolment, durbars, and sacred ceremonies of the Okuapemhene",
     count: "24 items",
-    gradient: "from-gold-dark to-gold",
+    image: "/Images/king.png",
   },
   {
     icon: Sparkles,
@@ -22,7 +23,7 @@ const galleries = [
     description:
       "Annual celebration of purification, harvest, and thanksgiving",
     count: "36 items",
-    gradient: "from-kente-red to-kente-red/80",
+    image: "/Images/New Img.png",
   },
   {
     icon: Landmark,
@@ -30,7 +31,7 @@ const galleries = [
     description:
       "Historic sites, architecture, and landmarks of the royal capital",
     count: "18 items",
-    gradient: "from-navy to-navy-light",
+    image: "/Images/4444 1.png",
   },
   {
     icon: Users,
@@ -38,7 +39,7 @@ const galleries = [
     description:
       "Community gatherings, development projects, and civic activities",
     count: "30 items",
-    gradient: "from-kente-green to-kente-green/80",
+    image: "/Images/group.png",
   },
   {
     icon: Music,
@@ -46,7 +47,7 @@ const galleries = [
     description:
       "Traditional music, dance, kente weaving, and artistic heritage",
     count: "22 items",
-    gradient: "from-charcoal to-charcoal-light",
+    image: "/Images/Discussion.png",
   },
   {
     icon: TreePine,
@@ -54,23 +55,21 @@ const galleries = [
     description:
       "Natural beauty and landscapes of the Akuapem Traditional Area",
     count: "15 items",
-    gradient: "from-kente-green/90 to-navy",
+    image: "/Images/People.png",
   },
 ];
 
 export default function GalleryPage() {
   return (
     <>
-      {/* Page hero */}
-      <section className="relative pt-32 pb-20 bg-navy">
-        <div className="absolute inset-0 opacity-[0.03]">
-          <div
-            className="h-full w-full"
-            style={{
-              backgroundImage: `repeating-linear-gradient(45deg, transparent, transparent 40px, rgba(196,151,90,0.5) 40px, rgba(196,151,90,0.5) 41px)`,
-            }}
-          />
-        </div>
+      <section className="relative pt-32 pb-20 bg-navy overflow-hidden">
+        <Image
+          src="/Images/Heritage.png"
+          alt="Akuapem cultural gathering"
+          fill
+          className="object-cover opacity-15"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-navy/50 via-navy/70 to-navy" />
         <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 md:px-8 text-center">
           <span className="text-gold text-sm tracking-[0.2em] uppercase font-medium">
             Visual Heritage
@@ -87,7 +86,6 @@ export default function GalleryPage() {
 
       <div className="kente-border" />
 
-      {/* Gallery categories */}
       <section className="py-24 bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 md:px-8">
           <div className="text-center mb-16">
@@ -107,23 +105,15 @@ export default function GalleryPage() {
                   key={gallery.title}
                   className="group relative rounded-sm overflow-hidden card-hover cursor-pointer"
                 >
-                  <div
-                    className={`h-64 bg-gradient-to-br ${gallery.gradient} flex items-center justify-center relative`}
-                  >
-                    <div className="absolute inset-0 opacity-10">
-                      <div
-                        className="h-full w-full"
-                        style={{
-                          backgroundImage: `repeating-linear-gradient(
-                            0deg, transparent, transparent 20px, rgba(255,255,255,0.1) 20px, rgba(255,255,255,0.1) 21px
-                          ),
-                          repeating-linear-gradient(
-                            90deg, transparent, transparent 20px, rgba(255,255,255,0.1) 20px, rgba(255,255,255,0.1) 21px
-                          )`,
-                        }}
-                      />
-                    </div>
-                    <Icon className="h-20 w-20 text-white/30 group-hover:scale-110 transition-transform duration-300" />
+                  <div className="h-64 relative flex items-center justify-center overflow-hidden">
+                    <Image
+                      src={gallery.image}
+                      alt={gallery.title}
+                      fill
+                      className="object-cover group-hover:scale-110 transition-transform duration-500"
+                    />
+                    <div className="absolute inset-0 bg-navy/40 group-hover:bg-navy/20 transition-colors duration-300" />
+                    <Icon className="relative z-10 h-16 w-16 text-white/60 group-hover:text-gold/80 transition-colors duration-300" />
                   </div>
 
                   <div className="bg-cream p-6">
@@ -146,18 +136,67 @@ export default function GalleryPage() {
         </div>
       </section>
 
-      {/* Placeholder banner */}
-      <section className="py-20 bg-cream text-center">
-        <div className="mx-auto max-w-3xl px-4 sm:px-6">
-          <h2 className="font-serif text-3xl font-bold text-navy mb-4">
-            Full Gallery Coming Soon
-          </h2>
-          <p className="text-charcoal-light/60 leading-relaxed">
-            We are curating a comprehensive visual archive of the Akuapem
-            Traditional Area&apos;s rich heritage. High-resolution photographs
-            from ceremonies, festivals, and community events will be available
-            soon.
-          </p>
+      {/* Featured photos grid */}
+      <section className="py-20 bg-cream">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 md:px-8">
+          <div className="text-center mb-12">
+            <span className="text-gold text-sm tracking-[0.2em] uppercase font-medium">
+              Highlights
+            </span>
+            <h2 className="font-serif text-3xl sm:text-4xl font-bold text-navy mt-3 gold-underline-center">
+              Featured Photos
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+            {[
+              {
+                src: "/Images/Hero.png",
+                alt: "His Royal Majesty in kente cloth",
+                span: "col-span-2 row-span-2",
+              },
+              {
+                src: "/Images/Queen.png",
+                alt: "The Queen Mother of Akuapem",
+                span: "",
+              },
+              {
+                src: "/Images/News.png",
+                alt: "Akuapem Odwira Festival",
+                span: "",
+              },
+              {
+                src: "/Images/group.png",
+                alt: "Community gathering",
+                span: "col-span-2",
+              },
+              {
+                src: "/Images/Heritage.png",
+                alt: "Traditional court proceedings",
+                span: "col-span-2",
+              },
+            ].map((photo) => (
+              <div
+                key={photo.src}
+                className={`relative rounded-sm overflow-hidden group ${photo.span} ${
+                  photo.span.includes("row-span-2")
+                    ? "min-h-[400px]"
+                    : "min-h-[200px]"
+                }`}
+              >
+                <Image
+                  src={photo.src}
+                  alt={photo.alt}
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-navy/0 group-hover:bg-navy/30 transition-colors duration-300" />
+                <div className="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-navy/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <p className="text-white text-xs">{photo.alt}</p>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
     </>

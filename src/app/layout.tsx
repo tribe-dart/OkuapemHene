@@ -17,17 +17,20 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "Office of the Okuapehene | Akuapem State",
+  title: "Office of the Okuapemhene | Akuapem State",
   description:
-    "Official website of His Royal Majesty Okuapehene Oseadeeyo Kwasi Akuffo III, King of the Akuapem State and 26th Occupant of the Ofori Kuma Stool. Driving socio-economic development, cultural preservation, and innovation across the Akuapem Traditional Area.",
+    "Official website of His Royal Majesty Okuapemhene Oseadeeyo Kwasi Akuffo III, King of the Akuapem State and 26th Occupant of the Ofori Kuma Stool. Driving socio-economic development, cultural preservation, and innovation across the Akuapem Traditional Area.",
+  icons: {
+    icon: "/Images/Logo.png",
+    apple: "/Images/Logo.png",
+  },
   keywords: [
-    "Okuapehene",
+    "Okuapemhene",
     "Oseadeeyo Kwasi Akuffo III",
     "Akuapem",
     "Akropong",
     "Ofori Kuma Stool",
     "Ghana",
-    "Chieftaincy",
     "Akan",
     "Eastern Region",
     "Odwira",
