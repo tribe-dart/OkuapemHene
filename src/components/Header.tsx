@@ -10,10 +10,11 @@ const navItems = [
     label: "About",
     href: "/about",
     children: [
+      { label: "Vision & Mission", href: "/about#vision" },
       { label: "History & Heritage", href: "/about#history" },
       { label: "The Royal Court", href: "/about#court" },
-      { label: "Governance & Traditions", href: "/about#governance" },
-      { label: "The Okuapeman Kingdom", href: "/about#kingdom" },
+      { label: "Governance", href: "/about#governance" },
+      { label: "The Akuapem State", href: "/about#kingdom" },
     ],
   },
   { label: "Chieftaincy", href: "/chieftaincy" },
@@ -51,10 +52,10 @@ export default function Header() {
             </div>
             <div className="hidden sm:block">
               <p className="font-serif text-base font-bold text-white leading-tight">
-                Okuapemhene
+                Okuapehene
               </p>
               <p className="text-[10px] text-gold-light tracking-widest uppercase">
-                Royal Palace
+                Office of the King
               </p>
             </div>
           </Link>

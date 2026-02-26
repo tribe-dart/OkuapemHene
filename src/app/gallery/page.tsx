@@ -1,45 +1,58 @@
-import { Crown, Landmark, Users, Music, Sparkles, TreePine } from "lucide-react";
+import {
+  Crown,
+  Landmark,
+  Users,
+  Music,
+  Sparkles,
+  TreePine,
+} from "lucide-react";
 
 const galleries = [
   {
     icon: Crown,
     title: "Royal Ceremonies",
-    description: "Enstoolment, durbars, and sacred ceremonies of the Okuapemhene",
+    description:
+      "Enstoolment, durbars, and sacred ceremonies of the Okuapehene",
     count: "24 items",
     gradient: "from-gold-dark to-gold",
   },
   {
     icon: Sparkles,
     title: "Odwira Festival",
-    description: "Annual celebration of purification, harvest, and thanksgiving",
+    description:
+      "Annual celebration of purification, harvest, and thanksgiving",
     count: "36 items",
     gradient: "from-kente-red to-kente-red/80",
   },
   {
     icon: Landmark,
     title: "The Palace & Akropong",
-    description: "Historic sites, architecture, and landmarks of the royal capital",
+    description:
+      "Historic sites, architecture, and landmarks of the royal capital",
     count: "18 items",
     gradient: "from-navy to-navy-light",
   },
   {
     icon: Users,
     title: "Community Events",
-    description: "Community gatherings, development projects, and civic activities",
+    description:
+      "Community gatherings, development projects, and civic activities",
     count: "30 items",
     gradient: "from-kente-green to-kente-green/80",
   },
   {
     icon: Music,
     title: "Cultural Arts",
-    description: "Traditional music, dance, kente weaving, and artistic heritage",
+    description:
+      "Traditional music, dance, kente weaving, and artistic heritage",
     count: "22 items",
     gradient: "from-charcoal to-charcoal-light",
   },
   {
     icon: TreePine,
     title: "The Akuapem Ridge",
-    description: "Natural beauty and landscapes of the Okuapeman Traditional Area",
+    description:
+      "Natural beauty and landscapes of the Akuapem Traditional Area",
     count: "15 items",
     gradient: "from-kente-green/90 to-navy",
   },
@@ -62,12 +75,12 @@ export default function GalleryPage() {
           <span className="text-gold text-sm tracking-[0.2em] uppercase font-medium">
             Visual Heritage
           </span>
-          <h1 className="font-serif text-5xl sm:text-6xl font-bold text-white mt-3 mb-6">
+          <h1 className="font-serif text-4xl sm:text-5xl font-bold text-white mt-3 mb-6">
             Photo <span className="text-gold">Gallery</span>
           </h1>
-          <p className="text-white/60 text-lg max-w-2xl mx-auto">
-            A visual journey through the rich culture, heritage, and community life
-            of the Okuapeman Traditional Area.
+          <p className="text-white/60 text-base max-w-2xl mx-auto">
+            A visual journey through the rich culture, heritage, and community
+            life of the Akuapem Traditional Area.
           </p>
         </div>
       </section>
@@ -81,7 +94,7 @@ export default function GalleryPage() {
             <span className="text-gold text-sm tracking-[0.2em] uppercase font-medium">
               Collections
             </span>
-            <h2 className="font-serif text-4xl sm:text-5xl font-bold text-navy mt-3 gold-underline-center">
+            <h2 className="font-serif text-3xl sm:text-4xl font-bold text-navy mt-3 gold-underline-center">
               Browse by Category
             </h2>
           </div>
@@ -140,9 +153,10 @@ export default function GalleryPage() {
             Full Gallery Coming Soon
           </h2>
           <p className="text-charcoal-light/60 leading-relaxed">
-            We are curating a comprehensive visual archive of the Okuapeman
-            Traditional Area&apos;s rich heritage. High-resolution photographs from
-            ceremonies, festivals, and community events will be available soon.
+            We are curating a comprehensive visual archive of the Akuapem
+            Traditional Area&apos;s rich heritage. High-resolution photographs
+            from ceremonies, festivals, and community events will be available
+            soon.
           </p>
         </div>
       </section>

@@ -3,10 +3,10 @@
 import { useEffect, useState, useRef } from "react";
 
 const stats = [
-  { value: 17, suffix: "+", label: "Traditional Towns", description: "Under the Okuapemhene's jurisdiction" },
-  { value: 300, suffix: "+", label: "Years of Heritage", description: "Rich history of chieftaincy" },
-  { value: 50, suffix: "K+", label: "Community Members", description: "United under one stool" },
-  { value: 12, suffix: "", label: "Annual Festivals", description: "Celebrating Akan culture" },
+  { value: 26, suffix: "th", label: "Ofori Kuma Stool", description: "Occupant of the sacred stool" },
+  { value: 5, suffix: "", label: "Year Work Programme", description: "2025–2030 development roadmap" },
+  { value: 4, suffix: "", label: "Key Focus Areas", description: "Institutional, economic, cultural, innovation" },
+  { value: 3, suffix: "", label: "Implementation Phases", description: "Phased rollout and scaling" },
 ];
 
 function useCountUp(target: number, duration: number, start: boolean) {
@@ -90,10 +90,10 @@ export default function StatsSection() {
       <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6">
         <div className="text-center mb-12">
           <span className="text-gold text-sm tracking-[0.2em] uppercase font-medium">
-            The Okuapeman Kingdom
+            Operational Policy 2025–2030
           </span>
           <h2 className="font-serif text-3xl sm:text-4xl font-bold text-white mt-3 gold-underline-center">
-            A Kingdom of Strength &amp; Unity
+            A Framework for Transformation
           </h2>
         </div>
 

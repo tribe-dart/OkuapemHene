@@ -11,9 +11,9 @@ const quickLinks = [
 ];
 
 const resourceLinks = [
-  { label: "History of Okuapeman", href: "/about#history" },
-  { label: "Royal Traditions", href: "/about#governance" },
-  { label: "Community Projects", href: "/development" },
+  { label: "Vision & Mission", href: "/about#vision" },
+  { label: "Operational Policy", href: "/about#governance" },
+  { label: "Work Programme 2025–2030", href: "/development" },
   { label: "Cultural Heritage", href: "/gallery" },
 ];
 
@@ -31,16 +31,17 @@ export default function Footer() {
               </div>
               <div>
                 <p className="font-serif text-base font-bold leading-tight">
-                  Okuapemhene
+                  Okuapehene
                 </p>
                 <p className="text-[10px] text-gold-light tracking-widest uppercase">
-                  Royal Palace
+                  Office of the King
                 </p>
               </div>
             </div>
             <p className="text-xs text-white/60 leading-relaxed">
-              The official website of the Okuapemhene, paramount chief of the
-              Okuapeman Traditional Area in the Eastern Region of Ghana.
+              The official website of the Office of the Okuapehene — His Royal
+              Majesty Oseadeeyo Kwasi Akuffo III, King of the Akuapem State and
+              26th Occupant of the Ofori Kuma Stool.
             </p>
           </div>
 
@@ -79,8 +80,8 @@ export default function Footer() {
           <div>
             <h3 className="font-serif text-gold text-base mb-5">Follow Us</h3>
             <p className="text-xs text-white/60 mb-5 leading-relaxed">
-              Stay connected with the latest news and events from the Okuapemhene
-              Palace.
+              Stay connected with the latest news and announcements from the
+              Office of the Okuapehene.
             </p>
             <div className="flex gap-2">
               {["Facebook", "Twitter", "Instagram", "YouTube"].map((platform) => (
@@ -101,10 +102,10 @@ export default function Footer() {
       <div className="border-t border-white/10">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 py-5 flex flex-col sm:flex-row items-center justify-between gap-3">
           <p className="text-[11px] text-white/40">
-            &copy; {new Date().getFullYear()} Office of the Okuapemhene. All rights reserved.
+            &copy; {new Date().getFullYear()} Office of the Okuapehene. All rights reserved.
           </p>
           <p className="text-[11px] text-white/40">
-            Okuapeman Traditional Area &middot; Eastern Region, Ghana
+            Akuapem Traditional Area &middot; Eastern Region, Ghana
           </p>
         </div>
       </div>

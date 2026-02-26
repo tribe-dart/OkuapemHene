@@ -1,15 +1,15 @@
-import { Crown, Users, Landmark, BookOpen, Scale, Star } from "lucide-react";
+import { Crown, Users, Landmark, BookOpen, Scale, Star, Target, Eye } from "lucide-react";
 
 const timeline = [
   {
-    era: "Pre-Colonial Era",
-    title: "Foundation of Okuapeman",
+    era: "Foundation",
+    title: "Establishment of the Akuapem State",
     description:
-      "The Okuapeman state was established by Akan migrants who settled along the Akuapem Ridge. Under the leadership of early paramount chiefs, the kingdom grew into a powerful confederation of towns united by shared customs, language, and governance.",
+      "The Akuapem State was established by Akan migrants who settled along the Akuapem Ridge. Under the leadership of early paramount chiefs, the kingdom grew into a powerful confederation of towns united by shared customs, language, and governance through the Ofori Kuma Stool.",
   },
   {
     era: "19th Century",
-    title: "Basel Mission & Education",
+    title: "Basel Mission & Education Pioneer",
     description:
       "The arrival of the Basel missionaries in Akropong in 1835 marked a transformative era. Akropong became a beacon of education in the Gold Coast, with the establishment of schools and the translation of the Bible into Twi by Johann Gottlieb Christaller.",
   },
@@ -17,35 +17,50 @@ const timeline = [
     era: "Colonial Period",
     title: "Resistance & Diplomacy",
     description:
-      "During the colonial period, successive Okuapemhenes navigated the complex relationship with British colonial authorities, preserving traditional institutions while advocating for the rights and welfare of the people.",
+      "During the colonial period, successive Okuapehenes navigated the complex relationship with British colonial authorities, preserving traditional institutions while advocating for the rights and welfare of the Akuapem people.",
   },
   {
     era: "Independence Era",
     title: "Nation Building",
     description:
-      "Following Ghana's independence in 1957, the Okuapemhene played a vital role in national development while maintaining the cultural identity and traditional governance structures of the Okuapeman area.",
+      "Following Ghana's independence in 1957, the Okuapehene played a vital role in national development while maintaining the cultural identity and traditional governance structures of the Akuapem area.",
   },
   {
-    era: "Modern Era",
-    title: "Progress & Preservation",
+    era: "Present Day",
+    title: "Reform & Transformation Under Oseadeeyo Kwasi Akuffo III",
     description:
-      "Today's Okuapemhene continues the legacy of leadership — championing education, healthcare, infrastructure development, and cultural preservation while embracing modern governance and sustainable development practices.",
+      "As the 26th Occupant of the Ofori Kuma Stool, His Royal Majesty is driving a renewed vision to modernize the Office into a world-class, globally recognized institution — restructuring, redeveloping, reforming, and rebranding to align with contemporary governance standards.",
   },
 ];
 
 const courtMembers = [
-  { role: "Okuapemhene", desc: "Paramount Chief and Head of the Traditional Council" },
-  { role: "Okuapemhemaa", desc: "Queen Mother, custodian of royal lineage and traditions" },
+  { role: "Okuapehene", desc: "King of the Akuapem State, First Citizen, and Head of the Traditional Council" },
+  { role: "Okuapehemaa", desc: "Queen Mother, custodian of royal lineage and traditions" },
   { role: "Gyaasehene", desc: "Chief of the Gyaase division, head of the palace household" },
-  { role: "Kontihene", desc: "Second in command, acts in the Okuapemhene's absence" },
+  { role: "Kontihene", desc: "Second in command, acts in the Okuapehene's absence" },
   { role: "Adontenhene", desc: "Chief of the main body (Adonten) of the traditional army" },
   { role: "Nifahene", desc: "Chief of the right wing division" },
+];
+
+const goals = [
+  "Improve the quality of life for all Akuapem citizens",
+  "Foster economic growth and create opportunities for all",
+  "Preserve and promote the unique cultural heritage of Akuapem",
+  "Position Akuapem as a center for innovation and development",
+];
+
+const principles = [
+  { icon: Scale, label: "Transparency & Accountability" },
+  { icon: Users, label: "Community Participation" },
+  { icon: Landmark, label: "Sustainability" },
+  { icon: BookOpen, label: "Respect for Cultural Diversity" },
+  { icon: Star, label: "Collaboration & Partnerships" },
+  { icon: Crown, label: "Traditional Authority" },
 ];
 
 export default function AboutPage() {
   return (
     <>
-      {/* Page hero */}
       <section className="relative pt-32 pb-20 bg-navy">
         <div className="absolute inset-0 opacity-[0.03]">
           <div
@@ -55,39 +70,119 @@ export default function AboutPage() {
             }}
           />
         </div>
-        <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 md:px-8 text-center">
+        <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 text-center">
           <span className="text-gold text-sm tracking-[0.2em] uppercase font-medium">
-            Discover
+            About
           </span>
-          <h1 className="font-serif text-5xl sm:text-6xl font-bold text-white mt-3 mb-6">
-            About the <span className="text-gold">Okuapemhene</span>
+          <h1 className="font-serif text-4xl sm:text-5xl font-bold text-white mt-3 mb-6">
+            The Office of the <span className="text-gold">Okuapehene</span>
           </h1>
-          <p className="text-white/60 text-lg max-w-2xl mx-auto">
-            Learn about the rich history, governance, and cultural significance of
-            the Okuapemhene and the Okuapeman Traditional Area.
+          <p className="text-white/60 text-lg max-w-3xl mx-auto">
+            His Royal Majesty Oseadeeyo Kwasi Akuffo III is the King of the
+            Akuapem State, the 26th Occupant of the Ofori Kuma Stool, and the
+            First Citizen of the Akuapem Traditional Area.
           </p>
         </div>
       </section>
 
       <div className="kente-border" />
 
+      {/* Vision & Mission */}
+      <section id="vision" className="py-20 bg-white">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+            <div>
+              <span className="text-gold text-sm tracking-[0.2em] uppercase font-medium">
+                Policy Direction
+              </span>
+              <h2 className="font-serif text-3xl sm:text-4xl font-bold text-navy mt-3 mb-6 gold-underline">
+                Vision &amp; Mission
+              </h2>
+
+              <div className="bg-cream rounded-sm p-6 mb-6">
+                <div className="flex items-center gap-3 mb-3">
+                  <Eye className="h-6 w-6 text-gold" />
+                  <h3 className="font-serif text-xl font-bold text-navy">Vision</h3>
+                </div>
+                <p className="text-charcoal-light/80 leading-relaxed">
+                  To transform the Office of the Okuapehene into a world-class,
+                  globally recognized institution, driving socio-economic
+                  development, cultural preservation, and innovation.
+                </p>
+              </div>
+
+              <div className="bg-cream rounded-sm p-6 mb-6">
+                <div className="flex items-center gap-3 mb-3">
+                  <Target className="h-6 w-6 text-gold" />
+                  <h3 className="font-serif text-xl font-bold text-navy">Mission</h3>
+                </div>
+                <p className="text-charcoal-light/80 leading-relaxed">
+                  To serve as a dynamic and transformative force, leading the
+                  Akuapem Traditional Area towards sustainable development while
+                  upholding its rich cultural heritage.
+                </p>
+              </div>
+
+              <p className="text-charcoal-light/70 text-sm leading-relaxed">
+                Over the years, the Office has remained largely ceremonial.
+                Under His Royal Majesty&apos;s dynamic leadership, there is now a
+                renewed vision to modernize and uplift the Office — restructuring,
+                redeveloping, reforming, and rebranding to align with contemporary
+                standards of governance and development.
+              </p>
+            </div>
+
+            <div>
+              <h3 className="font-serif text-xl font-bold text-navy mb-4">
+                Goals &amp; Aspirations
+              </h3>
+              <ul className="space-y-3 mb-8">
+                {goals.map((goal) => (
+                  <li key={goal} className="flex items-start gap-3">
+                    <span className="mt-1.5 h-2 w-2 rounded-full bg-gold shrink-0" />
+                    <span className="text-charcoal-light/80 text-sm leading-relaxed">{goal}</span>
+                  </li>
+                ))}
+              </ul>
+
+              <h3 className="font-serif text-xl font-bold text-navy mb-4">
+                Strategic Objectives
+              </h3>
+              <ul className="space-y-3">
+                {[
+                  "Strengthen institutional capacity and governance",
+                  "Promote sustainable economic development and job creation",
+                  "Invest in education, healthcare, and infrastructure",
+                  "Preserve and promote cultural heritage and tourism",
+                  "Foster innovation and technological advancement",
+                ].map((obj) => (
+                  <li key={obj} className="flex items-start gap-3">
+                    <span className="mt-1.5 h-2 w-2 rounded-full bg-gold shrink-0" />
+                    <span className="text-charcoal-light/80 text-sm leading-relaxed">{obj}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* History timeline */}
-      <section id="history" className="py-24 bg-white">
-        <div className="mx-auto max-w-5xl px-4 sm:px-6 md:px-8">
-          <div className="text-center mb-16">
+      <section id="history" className="py-20 bg-cream">
+        <div className="mx-auto max-w-5xl px-4 sm:px-6">
+          <div className="text-center mb-14">
             <span className="text-gold text-sm tracking-[0.2em] uppercase font-medium">
               Our Story
             </span>
-            <h2 className="font-serif text-4xl sm:text-5xl font-bold text-navy mt-3 gold-underline-center">
+            <h2 className="font-serif text-3xl sm:text-4xl font-bold text-navy mt-3 gold-underline-center">
               History &amp; Heritage
             </h2>
           </div>
 
           <div className="relative">
-            {/* Vertical line */}
             <div className="absolute left-6 md:left-1/2 top-0 bottom-0 w-px bg-gold/20 -translate-x-1/2" />
 
-            <div className="space-y-12">
+            <div className="space-y-10">
               {timeline.map((item, i) => (
                 <div
                   key={item.era}
@@ -95,22 +190,18 @@ export default function AboutPage() {
                     i % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
                   }`}
                 >
-                  {/* Dot */}
-                  <div className="absolute left-6 md:left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-gold border-4 border-white z-10 mt-2" />
-
-                  {/* Content */}
-                  <div className={`md:w-1/2 pl-16 md:pl-0 ${i % 2 === 0 ? "md:pr-16 md:text-right" : "md:pl-16"}`}>
+                  <div className="absolute left-6 md:left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-gold border-4 border-cream z-10 mt-2" />
+                  <div className={`md:w-1/2 pl-16 md:pl-0 ${i % 2 === 0 ? "md:pr-14 md:text-right" : "md:pl-14"}`}>
                     <span className="text-gold text-xs uppercase tracking-wider font-medium">
                       {item.era}
                     </span>
-                    <h3 className="font-serif text-2xl font-bold text-navy mt-1 mb-3">
+                    <h3 className="font-serif text-xl font-bold text-navy mt-1 mb-2">
                       {item.title}
                     </h3>
-                    <p className="text-charcoal-light/70 leading-relaxed">
+                    <p className="text-sm text-charcoal-light/70 leading-relaxed">
                       {item.description}
                     </p>
                   </div>
-
                   <div className="hidden md:block md:w-1/2" />
                 </div>
               ))}
@@ -120,13 +211,13 @@ export default function AboutPage() {
       </section>
 
       {/* Royal Court */}
-      <section id="court" className="py-24 bg-cream">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 md:px-8">
-          <div className="text-center mb-16">
+      <section id="court" className="py-20 bg-white">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6">
+          <div className="text-center mb-14">
             <span className="text-gold text-sm tracking-[0.2em] uppercase font-medium">
               Traditional Governance
             </span>
-            <h2 className="font-serif text-4xl sm:text-5xl font-bold text-navy mt-3 gold-underline-center">
+            <h2 className="font-serif text-3xl sm:text-4xl font-bold text-navy mt-3 gold-underline-center">
               The Royal Court
             </h2>
           </div>
@@ -135,12 +226,12 @@ export default function AboutPage() {
             {courtMembers.map((member) => (
               <div
                 key={member.role}
-                className="bg-white rounded-sm p-8 card-hover group"
+                className="bg-cream rounded-sm p-7 card-hover group"
               >
-                <div className="flex h-14 w-14 items-center justify-center rounded-full bg-navy/5 text-navy mb-5 group-hover:bg-gold/10 group-hover:text-gold transition-colors">
-                  <Crown className="h-7 w-7" />
+                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-navy/5 text-navy mb-4 group-hover:bg-gold/10 group-hover:text-gold transition-colors">
+                  <Crown className="h-6 w-6" />
                 </div>
-                <h3 className="font-serif text-xl font-bold text-navy mb-2">
+                <h3 className="font-serif text-lg font-bold text-navy mb-1">
                   {member.role}
                 </h3>
                 <p className="text-sm text-charcoal-light/60 leading-relaxed">
@@ -152,54 +243,45 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Governance & Traditions */}
-      <section id="governance" className="py-24 bg-white">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 md:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+      {/* Guiding Principles */}
+      <section id="governance" className="py-20 bg-cream">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div>
               <span className="text-gold text-sm tracking-[0.2em] uppercase font-medium">
-                Governance
+                Operational Policy
               </span>
-              <h2 className="font-serif text-4xl font-bold text-navy mt-3 mb-6 gold-underline">
-                Governance &amp; Traditions
+              <h2 className="font-serif text-3xl sm:text-4xl font-bold text-navy mt-3 mb-6 gold-underline">
+                Guiding Principles
               </h2>
               <p className="text-charcoal-light/80 leading-relaxed mb-4">
-                The Okuapemhene governs through a traditional council system rooted
-                in Akan customary law. The council comprises divisional chiefs,
-                sub-chiefs, and the Queen Mother, each playing a crucial role in
-                the administration of the traditional area.
+                The Operational Policy and Work Programme is guided by a set of
+                core principles that ensure every initiative serves the Akuapem
+                people with integrity, inclusiveness, and accountability.
               </p>
               <p className="text-charcoal-light/80 leading-relaxed mb-4">
-                Key governance principles include consensus-building, respect for
-                elders, communal responsibility, and the sacred bond between the
-                stool and the people. The Okuapemhene serves as the final arbiter
-                in traditional disputes and the custodian of customary law.
+                The Office exercises its traditional authority while operating in
+                full accordance with the laws of the Republic of Ghana and the
+                customary laws and practices of the Akuapem people.
               </p>
               <p className="text-charcoal-light/80 leading-relaxed">
-                The traditional governance system works alongside Ghana&apos;s
-                modern democratic institutions, with the Okuapemhene serving as a
-                member of the Eastern Regional House of Chiefs and the National
-                House of Chiefs.
+                Policy instruments include Executive Resolutions, Joint Agreements
+                with the national government, Memoranda of Understanding, and a
+                Joint Partnerships and Negotiation Charter — ensuring robust legal
+                and institutional foundations for all development activities.
               </p>
             </div>
 
             <div className="grid grid-cols-2 gap-4">
-              {[
-                { icon: Scale, label: "Justice & Arbitration" },
-                { icon: Users, label: "Community Assembly" },
-                { icon: Landmark, label: "Stool Traditions" },
-                { icon: BookOpen, label: "Customary Law" },
-                { icon: Star, label: "Sacred Oaths" },
-                { icon: Crown, label: "Royal Rites" },
-              ].map((item) => {
+              {principles.map((item) => {
                 const Icon = item.icon;
                 return (
                   <div
                     key={item.label}
-                    className="bg-cream rounded-sm p-6 text-center group hover:bg-navy transition-colors duration-300"
+                    className="bg-white rounded-sm p-5 text-center group hover:bg-navy transition-colors duration-300"
                   >
-                    <Icon className="h-8 w-8 text-gold mx-auto mb-3" />
-                    <p className="text-sm font-medium text-navy group-hover:text-white transition-colors">
+                    <Icon className="h-7 w-7 text-gold mx-auto mb-2" />
+                    <p className="text-xs font-medium text-navy group-hover:text-white transition-colors">
                       {item.label}
                     </p>
                   </div>
@@ -210,26 +292,26 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Kingdom overview */}
-      <section id="kingdom" className="py-24 bg-navy">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 md:px-8 text-center">
+      {/* The Akuapem State */}
+      <section id="kingdom" className="py-20 bg-navy">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 text-center">
           <span className="text-gold text-sm tracking-[0.2em] uppercase font-medium">
             The Kingdom
           </span>
-          <h2 className="font-serif text-4xl sm:text-5xl font-bold text-white mt-3 mb-6 gold-underline-center">
-            The Okuapeman Traditional Area
+          <h2 className="font-serif text-3xl sm:text-4xl font-bold text-white mt-3 mb-6 gold-underline-center">
+            The Akuapem Traditional Area
           </h2>
-          <p className="text-white/60 text-lg max-w-3xl mx-auto mb-12 leading-relaxed">
+          <p className="text-white/60 text-base max-w-3xl mx-auto mb-10 leading-relaxed">
             Stretching along the majestic Akuapem Ridge in Ghana&apos;s Eastern
-            Region, the Okuapeman Traditional Area encompasses over 17 towns and
+            Region, the Akuapem Traditional Area encompasses diverse towns and
             communities, each with its own sub-chief owing allegiance to the
-            Okuapemhene.
+            Okuapehene on the Ofori Kuma Stool.
           </p>
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 max-w-4xl mx-auto">
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-4xl mx-auto">
             {["Akropong", "Aburi", "Mampong", "Larteh", "Mamfe", "Tutu", "Amanokrom", "Adukrom"].map(
               (town) => (
-                <div key={town} className="stat-glow rounded-sm py-4 px-6">
-                  <p className="font-serif text-lg text-white font-semibold">
+                <div key={town} className="stat-glow rounded-sm py-3 px-5">
+                  <p className="font-serif text-base text-white font-semibold">
                     {town}
                   </p>
                 </div>

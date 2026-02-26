@@ -1,30 +1,30 @@
 import Link from "next/link";
-import { Crown, Users, BookOpen, Heart } from "lucide-react";
+import { Crown, Users, BookOpen, Lightbulb } from "lucide-react";
 
-const values = [
+const focusAreas = [
   {
     icon: Crown,
-    title: "Royal Authority",
+    title: "Institutional Strengthening",
     description:
-      "Upholding the sacred institution of Akan chieftaincy and the traditions passed down through generations of Okuapemhene rulers.",
+      "Developing a comprehensive organizational structure with robust financial management, capacity building, and clear governance frameworks.",
   },
   {
     icon: Users,
-    title: "Community Unity",
+    title: "Socio-Economic Development",
     description:
-      "Bringing together the diverse communities of the Okuapeman Traditional Area under a shared vision of progress and prosperity.",
+      "Collaborating with government, NGOs, and the private sector to attract investment, create opportunities, and address poverty and inequality.",
   },
   {
     icon: BookOpen,
-    title: "Cultural Preservation",
+    title: "Cultural Heritage Preservation",
     description:
-      "Safeguarding the rich cultural heritage, language, customs, and festivals that define the identity of Okuapeman.",
+      "Establishing a cultural heritage center, organizing festivals, supporting research on Akuapem history, and promoting cultural tourism.",
   },
   {
-    icon: Heart,
-    title: "Service to the People",
+    icon: Lightbulb,
+    title: "Innovation & Technology",
     description:
-      "Championing education, healthcare, infrastructure, and economic development to uplift the lives of all citizens.",
+      "Establishing an innovation hub, promoting digital literacy, and partnering with research institutions to drive technology-driven solutions.",
   },
 ];
 
@@ -35,29 +35,34 @@ export default function MissionSection() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-20">
           <div>
             <span className="text-gold text-sm tracking-[0.2em] uppercase font-medium">
-              Our Mission
+              Vision &amp; Mission
             </span>
             <h2 className="font-serif text-3xl sm:text-4xl font-bold text-navy mt-3 mb-6 gold-underline">
-              A Legacy of Leadership &amp; Service
+              A World-Class Institution for Akuapem
             </h2>
             <p className="text-charcoal-light/80 leading-relaxed text-base mb-4">
-              For centuries, the Okuapemhene has served as the paramount chief and
-              spiritual leader of the Okuapeman Traditional Area, one of the most
-              historically significant chieftaincy institutions in Ghana&apos;s
-              Eastern Region.
+              Under the dynamic leadership of His Royal Majesty Oseadeeyo Kwasi
+              Akuffo III, the Office of the Okuapehene is being transformed from a
+              largely ceremonial entity into a modern, globally recognized
+              institution driving significant socio-economic progress.
+            </p>
+            <p className="text-charcoal-light/80 leading-relaxed text-sm mb-4">
+              <strong className="text-navy">Vision:</strong> To transform the
+              Office of the Okuapehene into a world-class, globally recognized
+              institution, driving socio-economic development, cultural
+              preservation, and innovation.
             </p>
             <p className="text-charcoal-light/80 leading-relaxed text-sm mb-8">
-              From the ancient seat of Akropong, the Okuapemhene continues a
-              sacred tradition of governance rooted in Akan values — justice,
-              unity, and progress. The Palace works tirelessly to preserve
-              cultural heritage while driving modernization and sustainable
-              development for the people.
+              <strong className="text-navy">Mission:</strong> To serve as a
+              dynamic and transformative force, leading the Akuapem Traditional
+              Area towards sustainable development while upholding its rich
+              cultural heritage.
             </p>
             <Link
               href="/about"
               className="inline-flex items-center gap-2 text-gold font-medium border-b-2 border-gold/30 pb-1 hover:border-gold transition-colors uppercase text-sm tracking-wider"
             >
-              Learn More About Our Heritage
+              Read the Full Policy Framework
             </Link>
           </div>
 
@@ -67,11 +72,14 @@ export default function MissionSection() {
                 <div className="w-28 h-28 mx-auto mb-5 rounded-full border-4 border-gold/30 flex items-center justify-center">
                   <Crown className="h-14 w-14 text-gold/60" />
                 </div>
-                <p className="font-serif text-xl text-white/80 mb-2">
-                  The Okuapemhene
+                <p className="font-serif text-lg text-white/80 mb-1">
+                  Oseadeeyo Kwasi Akuffo III
                 </p>
-                <p className="text-gold-light/60 text-xs uppercase tracking-widest">
-                  Paramount Chief of Okuapeman
+                <p className="text-gold-light/80 text-sm mb-1">
+                  King of the Akuapem State
+                </p>
+                <p className="text-gold-light/50 text-xs uppercase tracking-widest">
+                  26th Occupant of the Ofori Kuma Stool
                 </p>
               </div>
             </div>
@@ -80,21 +88,21 @@ export default function MissionSection() {
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
-          {values.map((value) => {
-            const Icon = value.icon;
+          {focusAreas.map((area) => {
+            const Icon = area.icon;
             return (
               <div
-                key={value.title}
+                key={area.title}
                 className="group p-6 rounded-sm bg-cream hover:bg-navy transition-all duration-300 card-hover"
               >
                 <div className="flex h-12 w-12 items-center justify-center rounded-full bg-gold/10 text-gold mb-5 group-hover:bg-gold/20 transition-colors">
                   <Icon className="h-6 w-6" />
                 </div>
                 <h3 className="font-serif text-lg font-bold text-navy mb-2 group-hover:text-white transition-colors">
-                  {value.title}
+                  {area.title}
                 </h3>
                 <p className="text-sm text-charcoal-light/70 leading-relaxed group-hover:text-white/70 transition-colors">
-                  {value.description}
+                  {area.description}
                 </p>
               </div>
             );

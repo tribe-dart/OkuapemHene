@@ -1,24 +1,24 @@
 import Link from "next/link";
-import { ArrowRight, Landmark, BookOpen, Star } from "lucide-react";
+import { ArrowRight, Landmark, Target, TrendingUp } from "lucide-react";
 
-const highlights = [
+const roadmap = [
+  {
+    icon: Target,
+    title: "Short-Term (1–2 Years)",
+    description:
+      "Enhanced efficiency in internal processes, increased transparency through clearer roles and financial systems, and initial partnerships with key stakeholders for pilot projects.",
+  },
+  {
+    icon: TrendingUp,
+    title: "Medium-Term (3–5 Years)",
+    description:
+      "Tangible development impacts in education, healthcare, and economic growth. Cultural revitalization strengthening Akuapem identity and boosting tourism. Stronger institutional capacity.",
+  },
   {
     icon: Landmark,
-    title: "Akropong — The Royal Seat",
+    title: "Long-Term (5+ Years)",
     description:
-      "Perched atop the Akuapem Ridge, Akropong has served as the capital of the Okuapeman state for centuries. It is the home of the revered Okuapemhene stool and the center of traditional governance.",
-  },
-  {
-    icon: BookOpen,
-    title: "The Odwira Festival",
-    description:
-      "The Odwira festival is the most sacred annual celebration of the Okuapeman people, a time of purification, thanksgiving, and reaffirmation of allegiance to the Okuapemhene and the Golden Stool.",
-  },
-  {
-    icon: Star,
-    title: "Pioneers of Education",
-    description:
-      "Akropong was one of the first places in Ghana to receive formal Western education through the Basel Mission in the 19th century. The Okuapemhene has since championed education as a pillar of progress.",
+      "A globally recognized, world-class institution. Sustainable development ensuring economic prosperity, social well-being, and environmental protection. A lasting legacy of progress.",
   },
 ];
 
@@ -41,29 +41,30 @@ export default function HistorySection() {
             </div>
             <div className="relative z-10 p-8">
               <span className="inline-block px-3 py-1 bg-gold/20 text-gold text-xs uppercase tracking-wider rounded-sm mb-4">
-                Heritage
+                Policy Forecast
               </span>
               <h3 className="font-serif text-2xl font-bold text-white mb-3">
-                Over Three Centuries of Royal Tradition
+                From Ceremonial to Transformative
               </h3>
               <p className="text-white/60 text-sm max-w-md leading-relaxed">
-                The Okuapeman Kingdom is steeped in Akan history, with a royal
-                lineage that stretches back over 300 years of leadership,
-                cultural preservation, and community stewardship.
+                The Office will be empowered to function at the highest level of
+                excellence — comparable to the Office of the Ruler of Dubai, the
+                Emir of Qatar, and the King of Saudi Arabia — as a dynamic body
+                driving socio-economic progress across Akuapem State.
               </p>
             </div>
           </div>
 
           <div className="flex flex-col justify-center">
             <span className="text-gold text-sm tracking-[0.2em] uppercase font-medium">
-              Our Heritage
+              Strategic Roadmap
             </span>
             <h2 className="font-serif text-3xl sm:text-4xl font-bold text-navy mt-3 mb-8 gold-underline">
-              Roots of the Kingdom
+              Policy Forecast &amp; Timeline
             </h2>
 
             <div className="space-y-6">
-              {highlights.map((item) => {
+              {roadmap.map((item) => {
                 const Icon = item.icon;
                 return (
                   <div key={item.title} className="flex gap-4 group">
@@ -84,10 +85,10 @@ export default function HistorySection() {
             </div>
 
             <Link
-              href="/about"
+              href="/development"
               className="mt-8 inline-flex items-center gap-2 text-gold font-medium uppercase text-sm tracking-wider hover:gap-3 transition-all"
             >
-              Explore Full History
+              Full Work Programme
               <ArrowRight className="h-4 w-4" />
             </Link>
           </div>

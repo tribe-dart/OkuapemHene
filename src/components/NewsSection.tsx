@@ -3,35 +3,35 @@ import { ArrowRight, Calendar } from "lucide-react";
 
 const news = [
   {
-    date: "February 15, 2026",
-    category: "Royal Event",
-    title: "Okuapemhene Hosts Annual Odwira Festival Planning Committee",
+    date: "February 2026",
+    category: "Policy",
+    title: "Okuapehene Launches 2025–2030 Operational Policy and Work Programme",
     excerpt:
-      "Traditional council convenes to plan the upcoming Odwira festival celebrations, bringing together chiefs and community leaders.",
+      "His Royal Majesty unveils a comprehensive framework to transform the Office into a world-class institution driving development across the Akuapem Traditional Area.",
     color: "bg-kente-red",
   },
   {
-    date: "February 8, 2026",
+    date: "January 2026",
     category: "Development",
-    title: "New Community Health Center Inaugurated in Akropong",
+    title: "Innovation Hub Planned to Foster Technology-Driven Solutions",
     excerpt:
-      "The Okuapemhene inaugurates a state-of-the-art health facility, improving healthcare access for thousands of residents.",
+      "Plans announced for an innovation hub to support digital literacy, tech entrepreneurship, and locally-driven solutions to community challenges.",
     color: "bg-kente-green",
   },
   {
-    date: "January 28, 2026",
-    category: "Education",
-    title: "Okuapemhene Scholarship Fund Awards 50 Students",
+    date: "January 2026",
+    category: "Culture",
+    title: "Cultural Heritage Center to Preserve Akuapem Traditions",
     excerpt:
-      "Fifty outstanding students from the Okuapeman Traditional Area receive scholarships for tertiary education.",
+      "A new cultural heritage center will document, preserve, and promote Akuapem customs, artifacts, and history for future generations.",
     color: "bg-gold-dark",
   },
   {
-    date: "January 15, 2026",
-    category: "Culture",
-    title: "Cultural Heritage Museum Project Receives Government Support",
+    date: "December 2025",
+    category: "Governance",
+    title: "Office Restructuring Begins Under New Governance Framework",
     excerpt:
-      "Plans for a cultural heritage museum in Akropong gain momentum with support from the Ministry of Tourism and Culture.",
+      "Comprehensive reforms introduce modern financial management, streamlined administration, and clear organizational structures.",
     color: "bg-navy",
   },
 ];
@@ -46,7 +46,7 @@ export default function NewsSection() {
               Stay Informed
             </span>
             <h2 className="font-serif text-3xl sm:text-4xl font-bold text-navy mt-3 gold-underline">
-              Latest News &amp; Events
+              Latest News &amp; Announcements
             </h2>
           </div>
           <Link

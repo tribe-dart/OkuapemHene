@@ -17,19 +17,22 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "Okuapemhene | The Royal Palace of Okuapeman",
+  title: "Office of the Okuapehene | Akuapem State",
   description:
-    "Official website of the Okuapemhene, paramount chief of the Okuapeman Traditional Area in the Eastern Region of Ghana. Preserving heritage, fostering development, uniting a people.",
+    "Official website of His Royal Majesty Okuapehene Oseadeeyo Kwasi Akuffo III, King of the Akuapem State and 26th Occupant of the Ofori Kuma Stool. Driving socio-economic development, cultural preservation, and innovation across the Akuapem Traditional Area.",
   keywords: [
-    "Okuapemhene",
-    "Okuapeman",
-    "Ghana",
+    "Okuapehene",
+    "Oseadeeyo Kwasi Akuffo III",
+    "Akuapem",
     "Akropong",
+    "Ofori Kuma Stool",
+    "Ghana",
     "Chieftaincy",
     "Akan",
     "Eastern Region",
     "Odwira",
     "Traditional Authority",
+    "Akuapem State",
   ],
 };
 
