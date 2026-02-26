@@ -12,13 +12,20 @@ const stats = [
 
 function useCountUp(target: number, duration: number, start: boolean) {
   const [count, setCount] = useState(0);
+  const mounted = useRef(false);
 
   useEffect(() => {
-    if (!start) return;
+    mounted.current = true;
+    return () => { mounted.current = false; };
+  }, []);
+
+  useEffect(() => {
+    if (!start || !mounted.current) return;
     let startTime: number;
     let animationFrame: number;
 
     const step = (timestamp: number) => {
+      if (!mounted.current) return;
       if (!startTime) startTime = timestamp;
       const progress = Math.min((timestamp - startTime) / duration, 1);
       const eased = 1 - Math.pow(1 - progress, 3);
@@ -67,13 +74,20 @@ export default function StatsSection() {
   const [inView, setInView] = useState(false);
 
   useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+
     const observer = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting) setInView(true);
+        if (entry.isIntersecting) {
+          setInView(true);
+          observer.disconnect();
+        }
       },
       { threshold: 0.3 }
     );
-    if (ref.current) observer.observe(ref.current);
+
+    requestAnimationFrame(() => observer.observe(el));
     return () => observer.disconnect();
   }, []);
 
