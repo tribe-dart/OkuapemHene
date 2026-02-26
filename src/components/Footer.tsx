@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import { Facebook, Twitter, Instagram, Youtube } from "lucide-react";
 
 const quickLinks = [
   { label: "Home", href: "/" },
@@ -88,18 +89,24 @@ export default function Footer() {
               Office of the Okuapemhene.
             </p>
             <div className="flex gap-2">
-              {["Facebook", "Twitter", "Instagram", "YouTube"].map(
-                (platform) => (
+              {[
+                { label: "Facebook", icon: Facebook, href: "#" },
+                { label: "Twitter", icon: Twitter, href: "#" },
+                { label: "Instagram", icon: Instagram, href: "#" },
+                { label: "YouTube", icon: Youtube, href: "#" },
+              ].map((item) => {
+                const Icon = item.icon;
+                return (
                   <a
-                    key={platform}
-                    href="#"
-                    aria-label={platform}
-                    className="flex h-9 w-9 items-center justify-center rounded-full border border-white/20 text-white/60 hover:border-gold hover:text-gold hover:bg-gold/10 transition-all text-xs font-bold"
+                    key={item.label}
+                    href={item.href}
+                    aria-label={item.label}
+                    className="flex h-9 w-9 items-center justify-center rounded-full border border-white/20 text-white/60 hover:border-gold hover:text-gold hover:bg-gold/10 transition-all"
                   >
-                    {platform[0]}
+                    <Icon className="h-4 w-4" />
                   </a>
-                ),
-              )}
+                );
+              })}
             </div>
           </div>
         </div>
