@@ -43,16 +43,16 @@ export default function MissionSection() {
             </h2>
             <p className="text-charcoal-light/80 leading-relaxed text-base mb-4">
               Under the dynamic leadership of His Royal Majesty Oseadeeyo Kwasi
-              Akuffo III, the Office of the Okuapemhene is being transformed
-              from a largely ceremonial entity into a modern, globally
-              recognized institution driving significant socio-economic
-              progress.
+              Akuffo III, the Ofori Kuma Trust is driving the transformation of
+              the Akuapem Traditional Area — turning vision into action through
+              modern governance, strategic partnerships, and significant
+              socio-economic progress.
             </p>
             <p className="text-charcoal-light/80 leading-relaxed text-sm mb-4">
-              <strong className="text-navy">Vision:</strong> To transform the
-              Office of the Okuapemhene into a world-class, globally recognized
-              institution, driving socio-economic development, cultural
-              preservation, and innovation.
+              <strong className="text-navy">Vision:</strong> To build a
+              world-class, globally recognized institution driving
+              socio-economic development, cultural preservation, and innovation
+              across the Akuapem Traditional Area.
             </p>
             <p className="text-charcoal-light/80 leading-relaxed text-sm mb-8">
               <strong className="text-navy">Mission:</strong> To serve as a

@@ -7,7 +7,7 @@ const news = [
     date: "February 2026",
     category: "Policy",
     title:
-      "Okuapemhene Launches 2025–2030 Operational Policy and Work Programme",
+      "Ofori Kuma Trust Launches 2025–2030 Operational Policy and Work Programme",
     excerpt:
       "His Royal Majesty unveils a comprehensive framework to transform the Office into a world-class institution driving development across the Akuapem Traditional Area.",
     color: "bg-kente-red",

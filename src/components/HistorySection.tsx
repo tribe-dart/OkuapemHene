@@ -31,7 +31,7 @@ export default function HistorySection() {
           <div className="relative rounded-sm overflow-hidden min-h-[400px] flex items-end">
             <Image
               src="/Images/Heritage.png"
-              alt="Traditional gathering at the Okuapemhene's court"
+              alt="Traditional gathering at the Akuapem court"
               fill
               className="object-cover"
             />

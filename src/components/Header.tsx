@@ -47,17 +47,17 @@ export default function Header() {
           <Link href="/" className="flex items-center gap-3 group shrink-0">
             <Image
               src="/Images/Logo.png"
-              alt="Akuapem Traditional Area Crest"
+              alt="Ofori Kuma Trust Crest"
               width={44}
               height={44}
               className="rounded-full"
             />
             <div className="hidden sm:block">
               <p className="font-serif text-base font-bold text-white leading-tight">
-                Okuapemhene
+                Ofori Kuma Trust
               </p>
               <p className="text-[10px] text-gold-light tracking-widest uppercase">
-                Office of the King
+                Akuapem State
               </p>
             </div>
           </Link>

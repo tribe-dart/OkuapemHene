@@ -26,15 +26,15 @@ export default function CTASection() {
         <p className="text-white/60 text-lg max-w-2xl mx-auto mb-10 leading-relaxed">
           Whether you are a citizen of the Akuapem Traditional Area, a member of
           the diaspora, or an organisation looking to partner — there are many
-          ways to connect with and support the Office of the Okuapemhene in its
-          mission to drive sustainable development.
+          ways to connect with and support the Ofori Kuma Trust in its mission
+          to drive sustainable development.
         </p>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
           <Link
             href="/contact"
             className="inline-flex items-center justify-center h-14 px-10 bg-gold text-white font-medium rounded-sm tracking-wider uppercase text-sm hover:bg-gold-dark transition-colors"
           >
-            Contact the Office
+            Contact the Trust
           </Link>
           <Link
             href="/development"

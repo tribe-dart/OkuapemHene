@@ -17,11 +17,11 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "Office of the Okuapemhene | Akuapem State",
+  title: "Ofori Kuma Trust | Akuapem State",
   description:
-    "Official website of His Royal Majesty Okuapemhene Oseadeeyo Kwasi Akuffo III, King of the Akuapem State and 26th Occupant of the Ofori Kuma Stool. Driving socio-economic development, cultural preservation, and innovation across the Akuapem Traditional Area.",
+    "The Ofori Kuma Trust — established under the authority of His Royal Majesty Oseadeeyo Kwasi Akuffo III, 26th Occupant of the Ofori Kuma Stool. Driving socio-economic development, cultural preservation, and innovation across the Akuapem Traditional Area.",
   keywords: [
-    "Okuapemhene",
+    "Ofori Kuma Trust",
     "Oseadeeyo Kwasi Akuffo III",
     "Akuapem",
     "Akropong",

@@ -29,24 +29,24 @@ export default function Footer() {
             <div className="flex items-center gap-3 mb-5">
               <Image
                 src="/Images/Logo.png"
-                alt="Akuapem Traditional Area Crest"
+                alt="Ofori Kuma Trust Crest"
                 width={40}
                 height={40}
                 className="rounded-full"
               />
               <div>
                 <p className="font-serif text-base font-bold leading-tight">
-                  Okuapemhene
+                  Ofori Kuma Trust
                 </p>
                 <p className="text-[10px] text-gold-light tracking-widest uppercase">
-                  Office of the King
+                  Akuapem State
                 </p>
               </div>
             </div>
             <p className="text-xs text-white/60 leading-relaxed">
-              The official website of the Office of the Okuapemhene — His Royal
-              Majesty Oseadeeyo Kwasi Akuffo III, King of the Akuapem State and
-              26th Occupant of the Ofori Kuma Stool.
+              The Ofori Kuma Trust — established under the authority of His Royal
+              Majesty Oseadeeyo Kwasi Akuffo III, 26th Occupant of the Ofori
+              Kuma Stool, King of the Akuapem State.
             </p>
           </div>
 
@@ -86,7 +86,7 @@ export default function Footer() {
             <h3 className="font-serif text-gold text-base mb-5">Follow Us</h3>
             <p className="text-xs text-white/60 mb-5 leading-relaxed">
               Stay connected with the latest news and announcements from the
-              Office of the Okuapemhene.
+              Ofori Kuma Trust.
             </p>
             <div className="flex gap-2">
               {[
@@ -115,8 +115,8 @@ export default function Footer() {
       <div className="border-t border-white/10">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 py-5 flex flex-col sm:flex-row items-center justify-between gap-3">
           <p className="text-[11px] text-white/40">
-            &copy; {new Date().getFullYear()} Office of the Okuapemhene. All
-            rights reserved.
+            &copy; {new Date().getFullYear()} Ofori Kuma Trust. All rights
+            reserved.
           </p>
           <p className="text-[11px] text-white/40">
             Akuapem Traditional Area &middot; Eastern Region, Ghana
